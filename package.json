@@ -1,7 +1,7 @@
 {
 	"name": "electron-desktop-background",
 	"productName": "Electron Desktop Background",
-	"version": "0.0.0",
+	"version": "0.1.0",
 	"description": "Set any webpage as your desktop background. ",
 	"license": "UNLICENSED",
 	"repository": "mattruzzi/electron-desktop-background",
