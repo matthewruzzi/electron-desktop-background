@@ -1,0 +1,76 @@
+{
+	"name": "electron-desktop-background",
+	"productName": "Electron Desktop Background",
+	"version": "0.0.0",
+	"description": "Set any webpage as your desktop background. ",
+	"license": "UNLICENSED",
+	"repository": "mattruzzi/electron-desktop-background",
+	"author": {
+		"name": "Matthew Ruzzi",
+		"email": "68619790+mattruzzi@users.noreply.github.com",
+		"url": "https://mattruzzi.github.io/"
+	},
+	"scripts": {
+		"postinstall": "electron-builder install-app-deps",
+		"lint": "xo",
+		"test": "npm run lint",
+		"start": "electron .",
+		"pack": "electron-builder --dir",
+		"dist": "electron-builder --macos --linux --windows",
+		"release": "np"
+	},
+	"dependencies": {
+		"electron-context-menu": "^2.5.0",
+		"electron-debug": "^3.2.0",
+		"electron-prompt": "^1.6.1",
+		"electron-store": "^7.0.2",
+		"electron-unhandled": "^3.0.2",
+		"electron-updater": "^4.3.5",
+		"electron-util": "^0.14.2"
+	},
+	"devDependencies": {
+		"electron": "^11.3.0",
+		"electron-builder": "^22.9.1",
+		"np": "^7.4.0",
+		"xo": "^0.38.1"
+	},
+	"xo": {
+		"envs": [
+			"node",
+			"browser"
+		]
+	},
+	"np": {
+		"publish": false,
+		"releaseDraft": false
+	},
+	"build": {
+		"appId": "io.github.mattruzzi.electron-desktop-background",
+		"mac": {
+			"category": "public.app-category.utilities",
+			"darkModeSupport": true
+		},
+		"dmg": {
+			"iconSize": 160,
+			"contents": [
+				{
+					"x": 180,
+					"y": 170
+				},
+				{
+					"x": 480,
+					"y": 170,
+					"type": "link",
+					"path": "/Applications"
+				}
+			]
+		},
+		"linux": {
+			"target": [
+				"AppImage",
+				"deb"
+			],
+			"category": "Utility"
+		}
+	}
+}
