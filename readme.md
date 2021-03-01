@@ -1,4 +1,4 @@
-# Electron Desktop Background
+<h1> <img src="static/icon.png" height="40"> Electron Desktop Background</h1>
 
 > Set any webpage as your desktop background.
 
